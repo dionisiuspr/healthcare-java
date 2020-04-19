@@ -1,0 +1,1 @@
+localhost:8090/healthcare/patient/add?patient_name=Dionis&patient_address=Kopo&patient_age=66&patient_dob=1982-09-12&patient_gender=M&patient_uname=dio1234&patient_pwd=dio1123

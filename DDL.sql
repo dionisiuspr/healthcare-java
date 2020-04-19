@@ -22,15 +22,6 @@ CREATE TABLE medical_staff(
 	PRIMARY KEY(medstaff_id),
 );
 
-CREATE TABLE nonmedical_staff(
-	nonmed_id int,
-	nonmed_name VARCHAR(50),
-	nonmed_job VARCHAR(50),
-	nonmed_uname VARCHAR(50),
-	nonmed_pwd VARCHAR(20),
-	PRIMARY KEY(nonmed_id)
-);
-
 CREATE TABLE disease(
 	disease_id int,
 	disease_type VARCHAR(50),
