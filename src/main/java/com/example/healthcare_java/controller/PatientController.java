@@ -95,6 +95,5 @@ public class PatientController {
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
-
     }
 }

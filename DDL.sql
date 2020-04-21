@@ -18,8 +18,7 @@ CREATE TABLE medical_staff(
 	medstaff_name VARCHAR(50),
 	medstaff_uname VARCHAR(50),
 	medstaff_pwd VARCHAR(20),
-	anamnesia VARCHAR(300),
-	PRIMARY KEY(medstaff_id),
+	PRIMARY KEY(medstaff_id)
 );
 
 CREATE TABLE disease(
