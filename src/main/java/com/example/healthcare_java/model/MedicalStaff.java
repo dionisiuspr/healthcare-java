@@ -1,13 +1,16 @@
 package com.example.healthcare_java.model;
 
+// import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+// import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+// import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
+@Entity(name = "medicalStaff")
 @Table(name = "medical_staff")
 public class MedicalStaff {
 
@@ -27,14 +30,21 @@ public class MedicalStaff {
     @NotNull
     private String medstaff_pwd;
 
+    // @OneToMany(
+    //     mappedBy = "medicalStaff",
+    //     cascade = CascadeType.PERSIST,
+    //     fetch = FetchType.LAZY
+    // )
+
     public MedicalStaff() {
     }
 
-    public MedicalStaff(int medstaff_id) {
+    public MedicalStaff(final int medstaff_id) {
         this.medstaff_id = medstaff_id;
     }
 
-    public MedicalStaff(int medstaff_age, String medstaff_name, String medstaff_uname, String medstaff_pwd) {
+    public MedicalStaff(final int medstaff_age, final String medstaff_name, final String medstaff_uname,
+            final String medstaff_pwd) {
         this.medstaff_age = medstaff_age;
         this.medstaff_name = medstaff_name;
         this.medstaff_uname = medstaff_uname;
@@ -46,7 +56,7 @@ public class MedicalStaff {
         return this.medstaff_id;
     }
 
-    public void setMedstaff_id(int medstaff_id) {
+    public void setMedstaff_id(final int medstaff_id) {
         this.medstaff_id = medstaff_id;
     }
 
@@ -54,7 +64,7 @@ public class MedicalStaff {
         return this.medstaff_age;
     }
 
-    public void setMedstaff_age(int medstaff_age) {
+    public void setMedstaff_age(final int medstaff_age) {
         this.medstaff_age = medstaff_age;
     }
 
@@ -62,7 +72,7 @@ public class MedicalStaff {
         return this.medstaff_name;
     }
 
-    public void setMedstaff_name(String medstaff_name) {
+    public void setMedstaff_name(final String medstaff_name) {
         this.medstaff_name = medstaff_name;
     }
 
@@ -70,7 +80,7 @@ public class MedicalStaff {
         return this.medstaff_uname;
     }
 
-    public void setMedstaff_uname(String medstaff_uname) {
+    public void setMedstaff_uname(final String medstaff_uname) {
         this.medstaff_uname = medstaff_uname;
     }
 
@@ -78,7 +88,7 @@ public class MedicalStaff {
         return this.medstaff_pwd;
     }
 
-    public void setMedstaff_pwd(String medstaff_pwd) {
+    public void setMedstaff_pwd(final String medstaff_pwd) {
         this.medstaff_pwd = medstaff_pwd;
     }
 
