@@ -14,16 +14,22 @@ public class Medicine {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int medicine_id;
+
     @NotNull
     private String medicine_exp_date;
+
     @NotNull
     private String medicine_name;
+
     @NotNull
     private String medicine_vendor;
+
     @NotNull
     private int medicine_level;
+
     @NotNull
     private int medicine_price;
+    
     @NotNull
     private int medicine_qty;
 
@@ -31,7 +37,7 @@ public class Medicine {
     public Medicine() {
     }
 
-    public Medicine(int med_id){
+    public Medicine(int med_id) {
         this.medicine_id = med_id;
     }
 
@@ -44,7 +50,7 @@ public class Medicine {
         this.medicine_qty = med_qty;
     }
 
-    //Getter - setter
+    // Getter - setter
     public int getMedicine_id() {
         return this.medicine_id;
     }
@@ -101,9 +107,4 @@ public class Medicine {
         this.medicine_qty = medicine_qty;
     }
 
-
-
-    
-
-    
 }

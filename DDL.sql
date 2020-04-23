@@ -41,7 +41,7 @@ CREATE TABLE medicine(
 
 CREATE TABLE medical_record(
 	record_id int,
-	#fk
+	-- fk
 	patient_id int,
 	medstaff_id int,
 	disease_id int,
@@ -57,10 +57,10 @@ CREATE TABLE medical_record(
 
 CREATE TABLE appointment(
 	appt_id int,
-	appt_date date,
-	appt_time time,
+	appt_date VARCHAR(50),
+	appt_time VARCHAR(50),
 	appt_status boolean,
-	#fk
+	-- fk
 	patient_id int,
 	medstaff_id int,
 	PRIMARY KEY(appt_id),
@@ -69,10 +69,10 @@ CREATE TABLE appointment(
 );
 
 CREATE TABLE schedule(
-	schedule_id int NOT NULL AUTO_INCREMENT,
-	schedule_date date,
-	schedule_time time,
-	#fk
+	schedule_id int,
+	schedule_date VARCHAR(50),
+	schedule_time VARCHAR(50),
+	-- fk
 	medstaff_id int,
 	PRIMARY KEY(schedule_id),
 	FOREIGN KEY(medstaff_id) REFERENCES medical_staff(medstaff_id)
