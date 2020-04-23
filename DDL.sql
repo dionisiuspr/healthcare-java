@@ -24,7 +24,7 @@ CREATE TABLE medical_staff(
 CREATE TABLE disease(
 	disease_id int,
 	disease_type VARCHAR(50),
-	disease_name VARCHAR(50),
+	disease_name VARCHAR(50), 
 	PRIMARY KEY(disease_id)
 );
 
