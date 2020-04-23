@@ -24,16 +24,10 @@ public class MedicalStaff {
     @NotNull
     private String medstaff_name;
 
-    @NotNull
-    private String medstaff_uname;
-
-    @NotNull
-    private String medstaff_pwd;
-
     // @OneToMany(
-    //     mappedBy = "medicalStaff",
-    //     cascade = CascadeType.PERSIST,
-    //     fetch = FetchType.LAZY
+    // mappedBy = "medicalStaff",
+    // cascade = CascadeType.PERSIST,
+    // fetch = FetchType.LAZY
     // )
 
     public MedicalStaff() {
@@ -43,12 +37,9 @@ public class MedicalStaff {
         this.medstaff_id = medstaff_id;
     }
 
-    public MedicalStaff(final int medstaff_age, final String medstaff_name, final String medstaff_uname,
-            final String medstaff_pwd) {
+    public MedicalStaff(final int medstaff_age, final String medstaff_name) {
         this.medstaff_age = medstaff_age;
         this.medstaff_name = medstaff_name;
-        this.medstaff_uname = medstaff_uname;
-        this.medstaff_pwd = medstaff_pwd;
     }
 
     // getter - setter
@@ -75,21 +66,4 @@ public class MedicalStaff {
     public void setMedstaff_name(final String medstaff_name) {
         this.medstaff_name = medstaff_name;
     }
-
-    public String getMedstaff_uname() {
-        return this.medstaff_uname;
-    }
-
-    public void setMedstaff_uname(final String medstaff_uname) {
-        this.medstaff_uname = medstaff_uname;
-    }
-
-    public String getMedstaff_pwd() {
-        return this.medstaff_pwd;
-    }
-
-    public void setMedstaff_pwd(final String medstaff_pwd) {
-        this.medstaff_pwd = medstaff_pwd;
-    }
-
 }

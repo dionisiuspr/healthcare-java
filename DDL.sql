@@ -7,8 +7,6 @@ CREATE TABLE patient(
 	patient_age int,
 	patient_dob VARCHAR(50),
 	patient_gender char(1),
-	patient_uname VARCHAR(50),
-	patient_pwd VARCHAR(20),
 	PRIMARY KEY(patient_id)
 );
 
@@ -16,8 +14,6 @@ CREATE TABLE medical_staff(
 	medstaff_id int,
 	medstaff_age int,
 	medstaff_name VARCHAR(50),
-	medstaff_uname VARCHAR(50),
-	medstaff_pwd VARCHAR(20),
 	PRIMARY KEY(medstaff_id)
 );
 

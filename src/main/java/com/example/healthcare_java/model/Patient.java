@@ -30,12 +30,6 @@ public class Patient {
     @NotNull
     private String patient_gender;
 
-    @NotNull
-    private String patient_uname;
-
-    @NotNull
-    private String patient_pwd;
-
     // constructors
     public Patient() {
     }
@@ -44,14 +38,12 @@ public class Patient {
         this.patient_id = patient_id;
     }
 
-    public Patient(String patient_name, String patient_address, int patient_age, String patient_dob, String patient_gender, String patient_uname, String patient_pwd){
+    public Patient(String patient_name, String patient_address, int patient_age, String patient_dob, String patient_gender){
         this.patient_address = patient_address;
         this.patient_name = patient_name;
         this.patient_age = patient_age;
         this.patient_dob = patient_dob;
         this.patient_gender = patient_gender;
-        this.patient_uname = patient_uname;
-        this.patient_pwd = patient_pwd;
     }
 
     //getter - setter
@@ -101,21 +93,5 @@ public class Patient {
 
     public void setPatient_gender(String patient_gender) {
         this.patient_gender = patient_gender;
-    }
-
-    public String getPatient_uname() {
-        return this.patient_uname;
-    }
-
-    public void setPatient_uname(String patient_uname) {
-        this.patient_uname = patient_uname;
-    }
-
-    public String getPatient_pwd() {
-        return this.patient_pwd;
-    }
-
-    public void setPatient_pwd(String patient_pwd) {
-        this.patient_pwd = patient_pwd;
     }
 }

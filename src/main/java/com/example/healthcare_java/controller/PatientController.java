@@ -25,7 +25,7 @@ public class PatientController {
     @PostMapping(path = "/patient/add") // Map ONLY POST Requests
     public @ResponseBody ResponseEntity<Patient> addNewPatient(@RequestParam String patient_name,
             @RequestParam String patient_address, @RequestParam int patient_age, @RequestParam String patient_dob,
-            @RequestParam String patient_gender, @RequestParam String patient_uname, @RequestParam String patient_pwd) {
+            @RequestParam String patient_gender) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
@@ -36,8 +36,6 @@ public class PatientController {
             patientData.setPatient_age(patient_age);
             patientData.setPatient_dob(patient_dob);
             patientData.setPatient_gender(patient_gender);
-            patientData.setPatient_uname(patient_uname);
-            patientData.setPatient_pwd(patient_pwd);
             patientRepository.save(patientData);
             return ResponseEntity.ok(patientData);
         } catch (Exception e) {
@@ -68,8 +66,7 @@ public class PatientController {
     @PutMapping(path = "/patient/{id}")
     public @ResponseBody ResponseEntity<Patient> updatePatient(@RequestParam String patient_name,
             @RequestParam String patient_address, @RequestParam int patient_age, @RequestParam String patient_dob,
-            @RequestParam String patient_gender, @RequestParam String patient_uname, @RequestParam String patient_pwd,
-            @PathVariable int id) {
+            @RequestParam String patient_gender, @PathVariable int id) {
 
         try {
             Patient patientData = new Patient();
@@ -78,8 +75,6 @@ public class PatientController {
             patientData.setPatient_age(patient_age);
             patientData.setPatient_dob(patient_dob);
             patientData.setPatient_gender(patient_gender);
-            patientData.setPatient_uname(patient_uname);
-            patientData.setPatient_pwd(patient_pwd);
             patientRepository.save(patientData);
             return ResponseEntity.ok().build();
         } catch (Exception e) {

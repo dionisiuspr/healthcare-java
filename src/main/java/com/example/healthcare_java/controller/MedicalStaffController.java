@@ -24,15 +24,12 @@ public class MedicalStaffController {
     // insert
     @PostMapping(path = "/medstaff/add")
     public @ResponseBody ResponseEntity<MedicalStaff> addNewMedstaff(@RequestParam String medstaff_name,
-            @RequestParam int medstaff_age, @RequestParam String medstaff_uname, 
-            @RequestParam String medstaff_pwd) {
+            @RequestParam int medstaff_age) {
 
         try {
             MedicalStaff medstaffData = new MedicalStaff();
             medstaffData.setMedstaff_name(medstaff_name);
             medstaffData.setMedstaff_age(medstaff_age);
-            medstaffData.setMedstaff_uname(medstaff_uname);
-            medstaffData.setMedstaff_pwd(medstaff_pwd);
             medstaffRepository.save(medstaffData);
             return ResponseEntity.ok(medstaffData);
         } catch (Exception e) {
@@ -64,15 +61,12 @@ public class MedicalStaffController {
     // update
     @PutMapping(path = "/medstaff/{id}")
     public @ResponseBody ResponseEntity<MedicalStaff> updateMedstaff(@RequestParam String medstaff_name,
-            @RequestParam int medstaff_age, @RequestParam String medstaff_uname, 
-            @RequestParam String medstaff_pwd) {
+            @RequestParam int medstaff_age) {
 
         try {
             MedicalStaff medstaffData = new MedicalStaff();
             medstaffData.setMedstaff_name(medstaff_name);
             medstaffData.setMedstaff_age(medstaff_age);
-            medstaffData.setMedstaff_uname(medstaff_uname);
-            medstaffData.setMedstaff_pwd(medstaff_pwd);
             medstaffRepository.save(medstaffData);
             return ResponseEntity.ok(medstaffData);
         } catch (Exception e) {
