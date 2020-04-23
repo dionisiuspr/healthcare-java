@@ -48,6 +48,16 @@ CREATE TABLE medical_record(
 	FOREIGN KEY(disease_id) REFERENCES disease(disease_id)
 );
 
+CREATE TABLE medicine_list(
+	medicinelist_id int,
+	-- fk
+	record_id int,
+	medicine_id int,
+	PRIMARY KEY(medicinelist_id),
+	FOREIGN KEY(record_id) REFERENCES medical_record(record_id),
+	FOREIGN KEY(medicine_id) REFERENCES medicine(medicine_id)
+);
+
 CREATE TABLE appointment(
 	appt_id int,
 	appt_date VARCHAR(50),
