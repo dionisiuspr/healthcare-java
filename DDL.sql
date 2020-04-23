@@ -49,6 +49,8 @@ CREATE TABLE medical_record(
 	FOREIGN KEY(medstaff_id) REFERENCES medical_staff(medstaff_id),
 	FOREIGN KEY(disease_id) REFERENCES disease(disease_id),
 	FOREIGN KEY(medicine_id) references medicine(medicine_id),
+	FOREIGN KEY(record_id) REFERENCES medical_record(record_id),
+	FOREIGN KEY(medicine_id) REFERENCES medicine(medicine_id)
 );
 
 CREATE TABLE appointment(
