@@ -37,18 +37,15 @@ CREATE TABLE medicine(
 
 CREATE TABLE medical_record(
 	record_id int,
+	anamnesia VARCHAR(500),
 	-- fk
 	patient_id int,
 	medstaff_id int,
 	disease_id int,
-	medicine_id int,
-	hospital_id int,
-	anamnesia VARCHAR(500),
 	PRIMARY KEY(record_id),
 	FOREIGN KEY(patient_id) REFERENCES patient(patient_id),
 	FOREIGN KEY(medstaff_id) REFERENCES medical_staff(medstaff_id),
-	FOREIGN KEY(disease_id) REFERENCES disease(disease_id),
-	FOREIGN KEY(medicine_id) references medicine(medicine_id),
+	FOREIGN KEY(disease_id) REFERENCES disease(disease_id)
 );
 
 CREATE TABLE appointment(

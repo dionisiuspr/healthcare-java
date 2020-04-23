@@ -1,6 +1,6 @@
 Using username "ec2-user".
 Authenticating with public key "imported-openssh-key"
-Passphrase for key "imported-openssh-key":
+Passphrase for key "imported-openssh-key": java
 Last login: Thu Apr 23 07:36:46 2020 from 139.228.197.141
 
        __|  __|_  )
@@ -9,24 +9,12 @@ Last login: Thu Apr 23 07:36:46 2020 from 139.228.197.141
 
 https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
 [ec2-user@ip-172-31-24-117 ~]$ sudo su
-[root@ip-172-31-24-117 ec2-user]# ^C
-[root@ip-172-31-24-117 ec2-user]# ^C
-[root@ip-172-31-24-117 ec2-user]# exit
-exit
-[ec2-user@ip-172-31-24-117 ~]$ java -v
-Unrecognized option: -v
-Error: Could not create the Java Virtual Machine.
-Error: A fatal exception has occurred. Program will exit.
+
 [ec2-user@ip-172-31-24-117 ~]$ java -version
 java version "1.7.0_251"
 OpenJDK Runtime Environment (amzn-2.6.21.0.82.amzn1-x86_64 u251-b02)
 OpenJDK 64-Bit Server VM (build 24.251-b02, mixed mode)
-[ec2-user@ip-172-31-24-117 ~]$ sudo yum install openjdk-8-jdk
-Loaded plugins: priorities, update-motd, upgrade-helper
-amzn-main                                                | 2.1 kB     00:00
-amzn-updates                                             | 2.5 kB     00:00
-No package openjdk-8-jdk available.
-Error: Nothing to do
+
 [ec2-user@ip-172-31-24-117 ~]$ wget https://services.gradle.org/distributions/gradle-6.3-bin.zip
 --2020-04-23 08:33:06--  https://services.gradle.org/distributions/gradle-6.3-bin.zip
 Resolving services.gradle.org (services.gradle.org)... 104.18.191.9, 104.18.190.9, 2606:4700::6812:be09, ...
@@ -299,11 +287,6 @@ pam.d/          pki/            prelink.conf.d/ protocols
 passwd          pm/             printcap
 passwd-         popt.d/         profile
 pkcs11/         ppp/            profile.d/
-[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/p
-pam.d/          pki/            prelink.conf.d/ protocols
-passwd          pm/             printcap
-passwd-         popt.d/         profile
-pkcs11/         ppp/            profile.d/
 [ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/profile.d/gradle.sh
 [ec2-user@ip-172-31-24-117 ~]$ source /etc/profile.d/gradle.sh
 [ec2-user@ip-172-31-24-117 ~]$ gradle -v
@@ -482,75 +465,7 @@ Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
 JVM:          1.8.0_242 (Oracle Corporation 25.242-b08)
 OS:           Linux 4.14.171-105.231.amzn1.x86_64 amd64
 
-[ec2-user@ip-172-31-24-117 ~]$ git clone https://github.com/dionisiuspr/healthcare-java.git
--bash: git: command not found
-[ec2-user@ip-172-31-24-117 ~]$ yum install git
-Loaded plugins: priorities, update-motd, upgrade-helper
-You need to be root to perform this command.
 [ec2-user@ip-172-31-24-117 ~]$ sudo yum install git
-Loaded plugins: priorities, update-motd, upgrade-helper
-amzn-main                                                | 2.1 kB     00:00
-amzn-updates                                             | 2.5 kB     00:00
-Resolving Dependencies
---> Running transaction check
----> Package git.x86_64 0:2.14.6-1.62.amzn1 will be installed
---> Processing Dependency: perl-Git = 2.14.6-1.62.amzn1 for package: git-2.14.6-1.62.amzn1.x86_64
---> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.6-1.62.amzn1.x86_64
---> Processing Dependency: perl(Git::I18N) for package: git-2.14.6-1.62.amzn1.x86_64
---> Processing Dependency: perl(Git) for package: git-2.14.6-1.62.amzn1.x86_64
---> Processing Dependency: perl(Error) for package: git-2.14.6-1.62.amzn1.x86_64
---> Running transaction check
----> Package perl-Error.noarch 1:0.17020-2.9.amzn1 will be installed
----> Package perl-Git.noarch 0:2.14.6-1.62.amzn1 will be installed
----> Package perl-TermReadKey.x86_64 0:2.30-20.9.amzn1 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-================================================================================
- Package              Arch       Version                 Repository        Size
-================================================================================
-Installing:
- git                  x86_64     2.14.6-1.62.amzn1       amzn-updates      12 M
-Installing for dependencies:
- perl-Error           noarch     1:0.17020-2.9.amzn1     amzn-main         33 k
- perl-Git             noarch     2.14.6-1.62.amzn1       amzn-updates      69 k
- perl-TermReadKey     x86_64     2.30-20.9.amzn1         amzn-main         33 k
-
-Transaction Summary
-================================================================================
-Install  1 Package (+3 Dependent packages)
-
-Total download size: 12 M
-Installed size: 29 M
-Is this ok [y/d/N]: y
-Downloading packages:
-(1/4): perl-Error-0.17020-2.9.amzn1.noarch.rpm             |  33 kB   00:00
-(2/4): perl-Git-2.14.6-1.62.amzn1.noarch.rpm               |  69 kB   00:00
-(3/4): perl-TermReadKey-2.30-20.9.amzn1.x86_64.rpm         |  33 kB   00:00
-(4/4): git-2.14.6-1.62.amzn1.x86_64.rpm                    |  12 MB   00:00
---------------------------------------------------------------------------------
-Total                                               22 MB/s |  12 MB  00:00
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-  Installing : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      2/4
-  Installing : git-2.14.6-1.62.amzn1.x86_64                                 3/4
-  Installing : perl-Git-2.14.6-1.62.amzn1.noarch                            4/4
-  Verifying  : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-  Verifying  : git-2.14.6-1.62.amzn1.x86_64                                 2/4
-  Verifying  : perl-Git-2.14.6-1.62.amzn1.noarch                            3/4
-  Verifying  : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      4/4
-
-Installed:
-  git.x86_64 0:2.14.6-1.62.amzn1
-
-Dependency Installed:
-  perl-Error.noarch 1:0.17020-2.9.amzn1     perl-Git.noarch 0:2.14.6-1.62.amzn1
-  perl-TermReadKey.x86_64 0:2.30-20.9.amzn1
-
 Complete!
 [ec2-user@ip-172-31-24-117 ~]$ git clone https://github.com/dionisiuspr/healthcare-java.git
 Cloning into 'healthcare-java'...
@@ -560,3 +475,24 @@ remote: Compressing objects: 100% (75/75), done.
 remote: Total 116 (delta 25), reused 101 (delta 13), pack-reused 0
 Receiving objects: 100% (116/116), 66.54 KiB | 5.12 MiB/s, done.
 Resolving deltas: 100% (25/25), done.
+
+
+=====================
+https://phoenixnap.com/kb/install-java-on-centos
+http://yallalabs.com/devops/how-to-install-gradle-ubuntu-18-04-ubuntu-16-04/
+https://maven.apache.org/install.html
+https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
+
+CREATE USER 'root'@'172.31.24.117' IDENTIFIED BY 'java';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'3.23.85.249' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+CREATE USER 'root'@'%' IDENTIFIED BY 'java';
+
+mvn -T 4 install
+mvn -T 1C install //untuk RAM
+
+mvn spring-boot:run //untuk run, setelah masuk direktori project
+
+sudo shutdown -r now
+===============================
