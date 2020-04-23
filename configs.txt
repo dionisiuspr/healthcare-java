@@ -1,0 +1,562 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Passphrase for key "imported-openssh-key":
+Last login: Thu Apr 23 07:36:46 2020 from 139.228.197.141
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
+[ec2-user@ip-172-31-24-117 ~]$ sudo su
+[root@ip-172-31-24-117 ec2-user]# ^C
+[root@ip-172-31-24-117 ec2-user]# ^C
+[root@ip-172-31-24-117 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-24-117 ~]$ java -v
+Unrecognized option: -v
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+[ec2-user@ip-172-31-24-117 ~]$ java -version
+java version "1.7.0_251"
+OpenJDK Runtime Environment (amzn-2.6.21.0.82.amzn1-x86_64 u251-b02)
+OpenJDK 64-Bit Server VM (build 24.251-b02, mixed mode)
+[ec2-user@ip-172-31-24-117 ~]$ sudo yum install openjdk-8-jdk
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                | 2.1 kB     00:00
+amzn-updates                                             | 2.5 kB     00:00
+No package openjdk-8-jdk available.
+Error: Nothing to do
+[ec2-user@ip-172-31-24-117 ~]$ wget https://services.gradle.org/distributions/gradle-6.3-bin.zip
+--2020-04-23 08:33:06--  https://services.gradle.org/distributions/gradle-6.3-bin.zip
+Resolving services.gradle.org (services.gradle.org)... 104.18.191.9, 104.18.190.9, 2606:4700::6812:be09, ...
+Connecting to services.gradle.org (services.gradle.org)|104.18.191.9|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://downloads.gradle-dn.com/distributions/gradle-6.3-bin.zip [following]
+--2020-04-23 08:33:06--  https://downloads.gradle-dn.com/distributions/gradle-6.3-bin.zip
+Resolving downloads.gradle-dn.com (downloads.gradle-dn.com)... 104.17.159.20, 104.17.160.20, 2606:4700::6811:a014, ...
+Connecting to downloads.gradle-dn.com (downloads.gradle-dn.com)|104.17.159.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 101755602 (97M) [application/zip]
+Saving to: ‘gradle-6.3-bin.zip’
+
+gradle-6.3-bin.zip  100%[===================>]  97.04M  79.3MB/s    in 1.2s
+
+2020-04-23 08:33:07 (79.3 MB/s) - ‘gradle-6.3-bin.zip’ saved [101755602/101755602]
+
+[ec2-user@ip-172-31-24-117 ~]$ sudo yum install unzip
+Loaded plugins: priorities, update-motd, upgrade-helper
+Package unzip-6.0-4.10.amzn1.x86_64 already installed and latest version
+Nothing to do
+[ec2-user@ip-172-31-24-117 ~]$ sudo unzip -d /opt/gradle /tmp/gradle-6.3-bin.zip
+unzip:  cannot find or open /tmp/gradle-6.3-bin.zip, /tmp/gradle-6.3-bin.zip.zip or /tmp/gradle-6.3-bin.zip.ZIP.
+[ec2-user@ip-172-31-24-117 ~]$ sudo unzip -d /opt/gradle ./gradle-6.3-bin.zip   Archive:  ./gradle-6.3-bin.zip
+   creating: /opt/gradle/gradle-6.3/
+  inflating: /opt/gradle/gradle-6.3/README
+  inflating: /opt/gradle/gradle-6.3/LICENSE
+  inflating: /opt/gradle/gradle-6.3/NOTICE
+   creating: /opt/gradle/gradle-6.3/init.d/
+  inflating: /opt/gradle/gradle-6.3/init.d/readme.txt
+   creating: /opt/gradle/gradle-6.3/bin/
+  inflating: /opt/gradle/gradle-6.3/bin/gradle
+  inflating: /opt/gradle/gradle-6.3/bin/gradle.bat
+   creating: /opt/gradle/gradle-6.3/lib/
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-api-metadata-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-launcher-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-runtime-api-info-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-kotlin-dsl-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-build-events-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-tooling-api-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-wrapper-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-installation-beacon-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-bootstrap-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-core-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-file-collections-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-model-groovy-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-execution-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-model-core-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-build-cache-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-core-api-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-persistent-cache-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-worker-processes-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-logging-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-jvm-services-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-process-services-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-resources-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-messaging-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-base-services-groovy-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-base-services-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-build-option-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-cli-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-kotlin-dsl-tooling-models-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-compiler-embeddable-1.3.70-patched-for-gradle-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-docs-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-build-cache-packaging-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-snapshots-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-build-cache-base-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-files-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/groovy-all-1.3-2.5.10.jar
+  inflating: /opt/gradle/gradle-6.3/lib/jul-to-slf4j-1.7.28.jar
+  inflating: /opt/gradle/gradle-6.3/lib/log4j-over-slf4j-1.7.28.jar
+  inflating: /opt/gradle/gradle-6.3/lib/jcl-over-slf4j-1.7.28.jar
+  inflating: /opt/gradle/gradle-6.3/lib/slf4j-api-1.7.28.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-hashing-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-normalization-java-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/guava-27.1-android.jar
+  inflating: /opt/gradle/gradle-6.3/lib/commons-io-2.6.jar
+  inflating: /opt/gradle/gradle-6.3/lib/commons-lang-2.6.jar
+  inflating: /opt/gradle/gradle-6.3/lib/asm-commons-7.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/asm-analysis-7.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/asm-tree-7.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/asm-7.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/ant-1.10.7.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-stdlib-jdk8-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/javax.inject-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-scripting-common-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-scripting-jvm-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-scripting-jvm-host-embeddable-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-scripting-compiler-embeddable-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-scripting-compiler-impl-embeddable-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-sam-with-receiver-compiler-plugin-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlinx-metadata-jvm-0.1.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/commons-compress-1.19.jar
+  inflating: /opt/gradle/gradle-6.3/lib/fastutil-8.3.0-min.jar
+  inflating: /opt/gradle/gradle-6.3/lib/jansi-1.18.jar
+  inflating: /opt/gradle/gradle-6.3/lib/gradle-base-annotations-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/jsr305-3.0.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kryo-2.24.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/objenesis-2.6.jar
+  inflating: /opt/gradle/gradle-6.3/lib/trove4j-1.0.20181211.jar
+  inflating: /opt/gradle/gradle-6.3/lib/xml-apis-1.4.01.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-reflect-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-stdlib-jdk7-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-stdlib-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/annotations-13.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/ant-launcher-1.10.7.jar
+  inflating: /opt/gradle/gradle-6.3/lib/minlog-1.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-script-runtime-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-daemon-embeddable-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/failureaccess-1.0.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/kotlin-stdlib-common-1.3.70.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-freebsd-amd64-libcpp-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-aarch64-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-amd64-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-osx-amd64-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-windows-amd64-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-windows-amd64-min-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-windows-i386-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-windows-i386-min-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-aarch64-ncurses5-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-aarch64-ncurses6-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-amd64-ncurses5-0.22-milestone-1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/native-platform-linux-amd64-ncurses6-0.22-milestone-1.jar
+   creating: /opt/gradle/gradle-6.3/lib/plugins/
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-antlr-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-code-quality-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-signing-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-tooling-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-ide-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-testing-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-language-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-kotlin-dsl-provider-plugins-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-plugin-development-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-maven-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-ide-play-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-ide-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-scala-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-ear-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-platform-play-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-javascript-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-ivy-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-jacoco-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-build-init-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-kotlin-dsl-tooling-builders-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-plugins-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-test-kit-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-language-groovy-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-language-scala-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-testing-junit-platform-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-tooling-api-builders-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-testing-jvm-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-language-java-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-instant-execution-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-language-jvm-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-platform-jvm-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-platform-native-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-diagnostics-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-testing-base-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-reporting-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-publish-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-platform-base-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-version-control-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-dependency-management-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-composite-builds-6.3.jar 
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-plugin-use-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-resources-s3-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-resources-gcs-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-build-cache-http-6.3.jar 
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-security-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-resources-http-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-resources-sftp-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-build-profile-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gradle-workers-6.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/org.eclipse.jgit-5.5.0.201909110433-r.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/wagon-http-3.0.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/wagon-http-shared-3.0.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/google-api-services-storage-v1-rev136-1.25.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/google-api-client-1.25.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/asm-util-7.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/ivy-2.3.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-compat-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-core-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/pmaven-common-0.8-20100325.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/pmaven-groovy-0.8-20100325.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/wagon-file-3.0.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-container-default-1.7.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aether-connector-wagon-1.13.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/rhino-1.7.10.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/gson-2.8.5.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/simple-4.1.21.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jatl-0.2.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-plugin-api-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/testng-6.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/snakeyaml-1.17.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/dd-plist-1.21.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/junit-4.12.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/bsh-2.0b6.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/junit-platform-launcher-1.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aws-java-sdk-s3-1.11.633.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aws-java-sdk-kms-1.11.633.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aws-java-sdk-core-1.11.633.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/google-oauth-client-1.25.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/google-http-client-jackson2-1.25.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/google-http-client-1.25.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/httpclient-4.5.10.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jcifs-1.3.17.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/nekohtml-1.9.22.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/xercesImpl-2.12.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jsch-0.1.55.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jaxb-impl-2.3.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jmespath-java-1.11.633.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jackson-databind-2.10.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jackson-core-2.10.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jackson-annotations-2.10.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/joda-time-2.10.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/bcpg-jdk15on-1.64.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/bcpkix-jdk15on-1.61.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/bcprov-jdk15on-1.64.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/commons-codec-1.13.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-aether-provider-3.0.4.jar 
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aether-impl-1.13.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aether-util-1.13.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aether-spi-1.13.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/aether-api-1.13.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/hamcrest-core-1.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/httpcore-4.4.12.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jcommander-1.72.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/jzlib-1.1.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-artifact-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-model-builder-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-model-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-repository-metadata-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-settings-builder-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/maven-settings-3.0.4.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-sec-dispatcher-1.3.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-cipher-1.7.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-classworlds-2.5.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-component-annotations-1.5.5.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-interpolation-1.14.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/wagon-provider-api-3.0.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/plexus-utils-3.1.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/xbean-reflect-3.7.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/ion-java-1.0.2.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/junit-platform-engine-1.3.1.jar 
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/junit-platform-commons-1.3.1.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/apiguardian-api-1.0.0.jar
+  inflating: /opt/gradle/gradle-6.3/lib/plugins/opentest4j-1.1.1.jar
+[ec2-user@ip-172-31-24-117 ~]$ nano
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano
+.bash_logout        .bashrc             .ssh/
+.bash_profile       gradle-6.3-bin.zip  .wget-hsts
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano
+.bash_logout        .bashrc             .ssh/
+.bash_profile       gradle-6.3-bin.zip  .wget-hsts
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano
+.bash_logout        .bashrc             .ssh/
+.bash_profile       gradle-6.3-bin.zip  .wget-hsts
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /
+.autofsck     dev/          local/        proc/         srv/
+.autorelabel  etc/          lost+found/   root/         sys/
+bin/          home/         media/        run/          tmp/
+boot/         lib/          mnt/          sbin/         usr/
+cgroup/       lib64/        opt/          selinux/      var/
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/
+Display all 185 possibilities? (y or n)
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/p
+pam.d/          pki/            prelink.conf.d/ protocols
+passwd          pm/             printcap
+passwd-         popt.d/         profile
+pkcs11/         ppp/            profile.d/
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/p
+pam.d/          pki/            prelink.conf.d/ protocols
+passwd          pm/             printcap
+passwd-         popt.d/         profile
+pkcs11/         ppp/            profile.d/
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/profile.d/gradle.sh
+[ec2-user@ip-172-31-24-117 ~]$ source /etc/profile.d/gradle.sh
+[ec2-user@ip-172-31-24-117 ~]$ gradle -v
+Gradle 6.3 requires Java 8 or later to run. You are currently using Java 7.
+[ec2-user@ip-172-31-24-117 ~]$ sudo yum install java-1.8.0-openjdk
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                | 2.1 kB     00:00
+amzn-updates                                             | 2.5 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.242.b08-0.50.amzn1 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless(x86-64) = 1:1.8.0.242.b08-0.50.amzn1 for package: 1:java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64
+--> Running transaction check
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.242.b08-0.50.amzn1 will be installed
+amzn-main/latest/filelists_db                            | 5.7 MB     00:00
+amzn-updates/latest/filelists_db                         |  13 MB     00:00
+--> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.242.b08-0.50.amzn1.x86_64
+--> Processing Dependency: cups-libs(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.242.b08-0.50.amzn1.x86_64
+--> Running transaction check
+---> Package cups-libs.x86_64 1:1.4.2-67.21.amzn1 will be installed
+--> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+--> Processing Dependency: libgnutls.so.26(GNUTLS_1_4)(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+--> Processing Dependency: libtiff.so.5()(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+--> Processing Dependency: libgnutls.so.26()(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+--> Processing Dependency: libavahi-common.so.3()(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+--> Processing Dependency: libavahi-client.so.3()(64bit) for package: 1:cups-libs-1.4.2-67.21.amzn1.x86_64
+---> Package lksctp-tools.x86_64 0:1.0.10-7.7.amzn1 will be installed
+--> Running transaction check
+---> Package avahi-libs.x86_64 0:0.6.25-12.17.amzn1 will be installed
+---> Package gnutls.x86_64 0:2.12.23-21.18.amzn1 will be installed
+---> Package libtiff.x86_64 0:4.0.3-32.34.amzn1 will be installed
+--> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-32.34.amzn1.x86_64
+--> Running transaction check
+---> Package jbigkit-libs.x86_64 0:2.0-11.4.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                   Arch   Version                    Repository    Size
+================================================================================
+Installing:
+ java-1.8.0-openjdk        x86_64 1:1.8.0.242.b08-0.50.amzn1 amzn-updates 322 k
+Installing for dependencies:
+ avahi-libs                x86_64 0.6.25-12.17.amzn1         amzn-main     64 k
+ cups-libs                 x86_64 1:1.4.2-67.21.amzn1        amzn-main    364 k
+ gnutls                    x86_64 2.12.23-21.18.amzn1        amzn-main    450 k
+ java-1.8.0-openjdk-headless
+                           x86_64 1:1.8.0.242.b08-0.50.amzn1 amzn-updates  40 M
+ jbigkit-libs              x86_64 2.0-11.4.amzn1             amzn-main     47 k
+ libtiff                   x86_64 4.0.3-32.34.amzn1          amzn-updates 439 k
+ lksctp-tools              x86_64 1.0.10-7.7.amzn1           amzn-main     89 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+7 Dependent packages)
+
+Total download size: 42 M
+Installed size: 110 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/8): avahi-libs-0.6.25-12.17.amzn1.x86_64.rpm            |  64 kB   00:00
+(2/8): cups-libs-1.4.2-67.21.amzn1.x86_64.rpm              | 364 kB   00:00
+(3/8): jbigkit-libs-2.0-11.4.amzn1.x86_64.rpm              |  47 kB   00:00
+(4/8): gnutls-2.12.23-21.18.amzn1.x86_64.rpm               | 450 kB   00:00
+(5/8): java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64. | 322 kB   00:00
+(6/8): libtiff-4.0.3-32.34.amzn1.x86_64.rpm                | 439 kB   00:00
+(7/8): lksctp-tools-1.0.10-7.7.amzn1.x86_64.rpm            |  89 kB   00:00
+(8/8): java-1.8.0-openjdk-headless-1.8.0.242.b08-0.50.amzn |  40 MB   00:01
+--------------------------------------------------------------------------------
+Total                                               25 MB/s |  42 MB  00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jbigkit-libs-2.0-11.4.amzn1.x86_64                           1/8
+  Installing : libtiff-4.0.3-32.34.amzn1.x86_64                             2/8
+  Installing : avahi-libs-0.6.25-12.17.amzn1.x86_64                         3/8
+  Installing : lksctp-tools-1.0.10-7.7.amzn1.x86_64                         4/8
+  Installing : gnutls-2.12.23-21.18.amzn1.x86_64                            5/8
+  Installing : 1:cups-libs-1.4.2-67.21.amzn1.x86_64                         6/8
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.242.b08-0.50.amzn1.x86   7/8
+  Installing : 1:java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64         8/8
+  Verifying  : gnutls-2.12.23-21.18.amzn1.x86_64                            1/8
+  Verifying  : 1:cups-libs-1.4.2-67.21.amzn1.x86_64                         2/8
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.242.b08-0.50.amzn1.x86   3/8
+  Verifying  : lksctp-tools-1.0.10-7.7.amzn1.x86_64                         4/8
+  Verifying  : avahi-libs-0.6.25-12.17.amzn1.x86_64                         5/8
+  Verifying  : libtiff-4.0.3-32.34.amzn1.x86_64                             6/8
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64         7/8
+  Verifying  : jbigkit-libs-2.0-11.4.amzn1.x86_64                           8/8
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.242.b08-0.50.amzn1
+
+Dependency Installed:
+  avahi-libs.x86_64 0:0.6.25-12.17.amzn1
+  cups-libs.x86_64 1:1.4.2-67.21.amzn1
+  gnutls.x86_64 0:2.12.23-21.18.amzn1
+  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.242.b08-0.50.amzn1
+  jbigkit-libs.x86_64 0:2.0-11.4.amzn1
+  libtiff.x86_64 0:4.0.3-32.34.amzn1
+  lksctp-tools.x86_64 0:1.0.10-7.7.amzn1
+
+Complete!
+[ec2-user@ip-172-31-24-117 ~]$ java -version
+java version "1.7.0_251"
+OpenJDK Runtime Environment (amzn-2.6.21.0.82.amzn1-x86_64 u251-b02)
+OpenJDK 64-Bit Server VM (build 24.251-b02, mixed mode)
+[ec2-user@ip-172-31-24-117 ~]$ sudo update-alternatives --config java
+
+There are 2 programs which provide 'java'.
+
+  Selection    Command
+-----------------------------------------------
+*+ 1           /usr/lib/jvm/jre-1.7.0-openjdk.x86_64/bin/java
+   2           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+
+Enter to keep the current selection[+], or type selection number: 2
+[ec2-user@ip-172-31-24-117 ~]$ java -version
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+[ec2-user@ip-172-31-24-117 ~]$ gradle -v
+
+Welcome to Gradle 6.3!
+
+Here are the highlights of this release:
+ - Java 14 support
+ - Improved error messages for unexpected failures
+
+For more details see https://docs.gradle.org/6.3/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 6.3
+------------------------------------------------------------
+
+Build time:   2020-03-24 19:52:07 UTC
+Revision:     bacd40b727b0130eeac8855ae3f9fd9a0b207c60
+
+Kotlin:       1.3.70
+Groovy:       2.5.10
+Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+JVM:          1.8.0_242 (Oracle Corporation 25.242-b08)
+OS:           Linux 4.14.171-105.231.amzn1.x86_64 amd64
+
+
+==
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Passphrase for key "imported-openssh-key":
+Last login: Thu Apr 23 08:27:55 2020 from 139.228.197.141
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
+[ec2-user@ip-172-31-24-117 ~]$ java -version
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+[ec2-user@ip-172-31-24-117 ~]$ gradle -v
+
+------------------------------------------------------------
+Gradle 6.3
+------------------------------------------------------------
+
+Build time:   2020-03-24 19:52:07 UTC
+Revision:     bacd40b727b0130eeac8855ae3f9fd9a0b207c60
+
+Kotlin:       1.3.70
+Groovy:       2.5.10
+Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+JVM:          1.8.0_242 (Oracle Corporation 25.242-b08)
+OS:           Linux 4.14.171-105.231.amzn1.x86_64 amd64
+
+[ec2-user@ip-172-31-24-117 ~]$ git clone https://github.com/dionisiuspr/healthcare-java.git
+-bash: git: command not found
+[ec2-user@ip-172-31-24-117 ~]$ yum install git
+Loaded plugins: priorities, update-motd, upgrade-helper
+You need to be root to perform this command.
+[ec2-user@ip-172-31-24-117 ~]$ sudo yum install git
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                | 2.1 kB     00:00
+amzn-updates                                             | 2.5 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.14.6-1.62.amzn1 will be installed
+--> Processing Dependency: perl-Git = 2.14.6-1.62.amzn1 for package: git-2.14.6-1.62.amzn1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.6-1.62.amzn1.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.14.6-1.62.amzn1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.14.6-1.62.amzn1.x86_64
+--> Processing Dependency: perl(Error) for package: git-2.14.6-1.62.amzn1.x86_64
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.9.amzn1 will be installed
+---> Package perl-Git.noarch 0:2.14.6-1.62.amzn1 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.9.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package              Arch       Version                 Repository        Size
+================================================================================
+Installing:
+ git                  x86_64     2.14.6-1.62.amzn1       amzn-updates      12 M
+Installing for dependencies:
+ perl-Error           noarch     1:0.17020-2.9.amzn1     amzn-main         33 k
+ perl-Git             noarch     2.14.6-1.62.amzn1       amzn-updates      69 k
+ perl-TermReadKey     x86_64     2.30-20.9.amzn1         amzn-main         33 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 12 M
+Installed size: 29 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/4): perl-Error-0.17020-2.9.amzn1.noarch.rpm             |  33 kB   00:00
+(2/4): perl-Git-2.14.6-1.62.amzn1.noarch.rpm               |  69 kB   00:00
+(3/4): perl-TermReadKey-2.30-20.9.amzn1.x86_64.rpm         |  33 kB   00:00
+(4/4): git-2.14.6-1.62.amzn1.x86_64.rpm                    |  12 MB   00:00
+--------------------------------------------------------------------------------
+Total                                               22 MB/s |  12 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
+  Installing : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      2/4
+  Installing : git-2.14.6-1.62.amzn1.x86_64                                 3/4
+  Installing : perl-Git-2.14.6-1.62.amzn1.noarch                            4/4
+  Verifying  : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
+  Verifying  : git-2.14.6-1.62.amzn1.x86_64                                 2/4
+  Verifying  : perl-Git-2.14.6-1.62.amzn1.noarch                            3/4
+  Verifying  : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      4/4
+
+Installed:
+  git.x86_64 0:2.14.6-1.62.amzn1
+
+Dependency Installed:
+  perl-Error.noarch 1:0.17020-2.9.amzn1     perl-Git.noarch 0:2.14.6-1.62.amzn1
+  perl-TermReadKey.x86_64 0:2.30-20.9.amzn1
+
+Complete!
+[ec2-user@ip-172-31-24-117 ~]$ git clone https://github.com/dionisiuspr/healthcare-java.git
+Cloning into 'healthcare-java'...
+remote: Enumerating objects: 116, done.
+remote: Counting objects: 100% (116/116), done.
+remote: Compressing objects: 100% (75/75), done.
+remote: Total 116 (delta 25), reused 101 (delta 13), pack-reused 0
+Receiving objects: 100% (116/116), 66.54 KiB | 5.12 MiB/s, done.
+Resolving deltas: 100% (25/25), done.
