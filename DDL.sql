@@ -31,11 +31,11 @@ CREATE TABLE disease(
 CREATE TABLE medicine(
 	medicine_id int,
 	medicine_exp_date VARCHAR(50),
-	medicine_level int,
 	medicine_name VARCHAR(30),
+	medicine_vendor VARCHAR(30),
+	medicine_level int,
 	medicine_price int,
 	medicine_qty int,
-	medicine_vendor VARCHAR(30),
 	PRIMARY KEY(medicine_id)
 );
 
