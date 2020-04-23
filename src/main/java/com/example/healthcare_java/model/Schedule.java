@@ -7,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+// import javax.persistence.Table;
+// import javax.validation.constraints.NotNull;
 
 @Entity
 public class Schedule {
@@ -28,7 +28,6 @@ public class Schedule {
 
     }
 
-    
 
     public String getSchedule_date() {
         return this.schedule_date;
@@ -37,14 +36,6 @@ public class Schedule {
     public void setSchedule_date(String schedule_date) {
         this.schedule_date = schedule_date;
     }
-
-    public Object get() {
-		return this.;
-	}
-
-    public void set(Object ) {
-		this. = ;
-	}
 
     public String getSchedule_time() {
         return this.schedule_time;
