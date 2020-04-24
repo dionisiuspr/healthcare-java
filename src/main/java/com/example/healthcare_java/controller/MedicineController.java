@@ -64,13 +64,14 @@ public class MedicineController {
     }
 
     // update
-    @PutMapping(path = "/medicine/{id}")
+    @PutMapping(path = "/medicine/{medicine_id}")
     public @ResponseBody ResponseEntity<Medicine> updateMedicine(@RequestParam String med_date,
             @RequestParam String med_name, @RequestParam String med_vendor, @RequestParam int med_level,
-            @RequestParam int med_price, @RequestParam int med_qty) {
+            @RequestParam int med_price, @RequestParam int med_qty, @PathVariable int medicine_id) {
 
         try {
             Medicine medicineData = new Medicine();
+            medicineData.setMedicine_id(medicine_id);
             medicineData.setMedicine_exp_date(med_date);
             medicineData.setMedicine_name(med_name);
             medicineData.setMedicine_vendor(med_vendor);

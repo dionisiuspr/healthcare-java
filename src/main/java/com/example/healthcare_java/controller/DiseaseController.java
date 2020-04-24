@@ -59,12 +59,14 @@ public class DiseaseController {
     }
 
     // update
-    @PutMapping(path = "/disease/{id}")
+    @PutMapping(path = "/disease/{disease_id}")
     public @ResponseBody ResponseEntity<Disease> updateDisease(@RequestParam String disease_type,
-            @RequestParam String disease_name) {
+            @RequestParam String disease_name,
+            @PathVariable int disease_id) {
 
         try {
             Disease diseaseData = new Disease();
+            diseaseData.setDisease_id(disease_id);
             diseaseData.setDisease_type(disease_type);
             diseaseData.setDisease_name(disease_name);
             diseaseRepository.save(diseaseData);

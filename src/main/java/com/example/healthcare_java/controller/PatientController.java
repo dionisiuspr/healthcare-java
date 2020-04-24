@@ -63,13 +63,14 @@ public class PatientController {
         }
     }
 
-    @PutMapping(path = "/patient/{id}")
+    @PutMapping(path = "/patient/{patient_id}")
     public @ResponseBody ResponseEntity<Patient> updatePatient(@RequestParam String patient_name,
             @RequestParam String patient_address, @RequestParam int patient_age, @RequestParam String patient_dob,
-            @RequestParam String patient_gender, @PathVariable int id) {
+            @RequestParam String patient_gender, @PathVariable int patient_id) {
 
         try {
             Patient patientData = new Patient();
+            patientData.setPatient_id(patient_id);
             patientData.setPatient_name(patient_name);
             patientData.setPatient_address(patient_address);
             patientData.setPatient_age(patient_age);

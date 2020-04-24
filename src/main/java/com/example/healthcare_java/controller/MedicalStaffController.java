@@ -59,12 +59,14 @@ public class MedicalStaffController {
     }
 
     // update
-    @PutMapping(path = "/medstaff/{id}")
+    @PutMapping(path = "/medstaff/{medstaff_id}")
     public @ResponseBody ResponseEntity<MedicalStaff> updateMedstaff(@RequestParam String medstaff_name,
-            @RequestParam int medstaff_age) {
+            @RequestParam int medstaff_age,
+            @PathVariable int medstaff_id) {
 
         try {
             MedicalStaff medstaffData = new MedicalStaff();
+            medstaffData.setMedstaff_id(medstaff_id);
             medstaffData.setMedstaff_name(medstaff_name);
             medstaffData.setMedstaff_age(medstaff_age);
             medstaffRepository.save(medstaffData);
