@@ -36,7 +36,6 @@ public class MedicalStaff implements Serializable{
     (
         targetEntity = Schedule.class,
         mappedBy = "medicalStaff",
-        cascade = CascadeType.PERSIST,
         fetch = FetchType.LAZY
     )
     @JsonIgnore
