@@ -78,7 +78,7 @@ public class MedicineController {
             medicineData.setMedicine_price(med_price);
             medicineData.setMedicine_qty(med_qty);
             medicineRepository.save(medicineData);
-            return ResponseEntity.ok(medicineData);
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

@@ -68,7 +68,7 @@ public class MedicalStaffController {
             medstaffData.setMedstaff_name(medstaff_name);
             medstaffData.setMedstaff_age(medstaff_age);
             medstaffRepository.save(medstaffData);
-            return ResponseEntity.ok(medstaffData);
+            return ResponseEntity.ok(medstaffData).build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

@@ -68,7 +68,7 @@ public class DiseaseController {
             diseaseData.setDisease_type(disease_type);
             diseaseData.setDisease_name(disease_name);
             diseaseRepository.save(diseaseData);
-            return ResponseEntity.ok(diseaseData);
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

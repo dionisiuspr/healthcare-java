@@ -82,7 +82,7 @@ public class ScheduleController {
             scheduleData.setSchedule_date(schedule_date);
             scheduleData.setSchedule_time(schedule_time);
             scheduleRepository.save (scheduleData);
-            return ResponseEntity.ok(scheduleData);
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
