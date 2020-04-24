@@ -1,15 +1,26 @@
 package com.example.healthcare_java.model;
 
+import java.io.Serializable;
+import java.util.Set;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "disease")
-public class Disease {
+public class Disease implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int disease_id;
@@ -19,6 +30,11 @@ public class Disease {
 
     @NotNull
     private String disease_name;
+
+    // relation to medical_record
+    @OneToMany(targetEntity = MedicalRecord.class, mappedBy = "disease", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<MedicalRecord> medicalRecord;
 
     // constructor
     public Disease() {
@@ -58,4 +74,16 @@ public class Disease {
         this.disease_name = disease_name;
     }
 
+    // Medical record
+    @JsonBackReference
+    public Set<MedicalRecord> getMedicalRecord() {
+        return medicalRecord;
+    }
+
+    public void setMedicalRecord(Set<MedicalRecord> medicalRecord) {
+        this.medicalRecord = medicalRecord;
+        for (MedicalRecord medicalRecords : medicalRecord) {
+            medicalRecords.setDisease(this);
+        }
+    }
 }

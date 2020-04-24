@@ -31,13 +31,20 @@ public class MedicalStaff implements Serializable {
     @NotNull
     private String medstaff_name;
 
+    //relation to schedule
     @OneToMany(targetEntity = Schedule.class, mappedBy = "medicalStaff", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Schedule> schedule;
 
+    //relation to appointment
     @OneToMany(targetEntity = Appointment.class, mappedBy = "medicalStaff", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Appointment> appointment;
+
+    //relation to medical_record
+    @OneToMany(targetEntity = MedicalRecord.class, mappedBy = "medicalStaff", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<MedicalRecord> medicalRecord;  
 
     public MedicalStaff() {
     }
@@ -99,6 +106,19 @@ public class MedicalStaff implements Serializable {
         this.appointment = appointment;
         for (Appointment appointments : appointment) {
             appointments.setMedicalStaff(this);
+        }
+    }
+
+    //Medical Record
+    @JsonBackReference
+    public Set<MedicalRecord> getMedicalRecord() {
+        return medicalRecord;
+    }
+
+    public void setMedicalRecord(Set<MedicalRecord> medicalRecord) {
+        this.medicalRecord = medicalRecord;
+        for (MedicalRecord medicalRecords : medicalRecord) {
+            medicalRecords.setMedicalStaff(this);
         }
     }
 

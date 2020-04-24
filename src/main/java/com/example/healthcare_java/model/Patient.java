@@ -40,9 +40,15 @@ public class Patient implements Serializable {
     @NotNull
     private String patient_gender;
 
+    //relation to appointment
     @OneToMany(targetEntity = Appointment.class, mappedBy = "patient", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Appointment> appointment;
+
+    //relation to medical_record
+    @OneToMany(targetEntity = MedicalRecord.class, mappedBy = "patient", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<MedicalRecord> medicalRecord;  
 
     // constructors
     public Patient() {
@@ -120,6 +126,19 @@ public class Patient implements Serializable {
         this.appointment = appointment;
         for (Appointment appointments : appointment) {
             appointments.setPatient(this);
+        }
+    }
+
+    //medical record
+    @JsonBackReference
+    public Set<MedicalRecord> getMedicalRecord() {
+        return medicalRecord;
+    }
+
+    public void setMedicalRecord(Set<MedicalRecord> medicalRecord) {
+        this.medicalRecord = medicalRecord;
+        for (MedicalRecord medicalRecords : medicalRecord) {
+            medicalRecords.setPatient(this);
         }
     }
 }
