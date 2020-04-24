@@ -91,6 +91,7 @@ public class AppointmentController {
             appointmentData.setMedicalStaff(medicalData);
             appointmentData.setPatient(patientData);
 
+            appointmentData.setAppointment_id(appointment_id);
             appointmentData.setAppointment_date(appointment_date);
             appointmentData.setAppointment_time(appointment_time);
             appointmentData.setAppointment_status(appointment_status);
