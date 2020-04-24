@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "medical_staff")
@@ -38,7 +38,7 @@ public class MedicalStaff implements Serializable{
         mappedBy = "medicalStaff",
         fetch = FetchType.LAZY
     )
-    @JsonIgnore
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
     private Set<Schedule> schedule;
 
     public MedicalStaff() {
