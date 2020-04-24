@@ -47,4 +47,14 @@ public class ScheduleController {
         }
     }
 
+      // get
+      @GetMapping(path = "/schedule")
+      public @ResponseBody ResponseEntity<Iterable<Schedule>> getAllSchedule() {
+          try {
+              return ResponseEntity.ok(scheduleRepository.findAll());
+          } catch (Exception e) {
+              return ResponseEntity.notFound().build();
+          }
+      }
+
 }
