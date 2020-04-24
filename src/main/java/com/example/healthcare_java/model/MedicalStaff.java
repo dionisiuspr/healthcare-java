@@ -38,7 +38,7 @@ public class MedicalStaff implements Serializable{
         mappedBy = "medicalStaff",
         fetch = FetchType.LAZY
     )
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
+    @JsonIgnore
     private Set<Schedule> schedule;
 
     public MedicalStaff() {
