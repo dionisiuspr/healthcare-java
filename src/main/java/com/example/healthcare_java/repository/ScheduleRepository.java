@@ -1,11 +1,11 @@
 package com.example.healthcare_java.repository;
 
-import com.example.healthcare_java.model.MedicalStaff;
+import com.example.healthcare_java.model.Schedule;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MedicalStaffRepository extends CrudRepository<MedicalStaff, Integer> {
+public interface ScheduleRepository extends CrudRepository<Schedule, Integer> {
     
 }

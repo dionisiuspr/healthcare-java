@@ -7,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-// import javax.persistence.Table;
-// import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Schedule {
@@ -21,7 +21,7 @@ public class Schedule {
     private String schedule_time;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "medstaff_id", referencedColumnName = "medstaff_id")
+    @JoinColumn(name = "medstaff_id", nullable = false)
     private MedicalStaff medicalStaff;
 
     public Schedule() {
@@ -43,6 +43,23 @@ public class Schedule {
 
     public void setSchedule_time(String schedule_time) {
         this.schedule_time = schedule_time;
+    }
+
+    public int getSchedule_id() {
+        return schedule_id;
+    }
+
+    public void setSchedule_id(int schedule_id) {
+        this.schedule_id = schedule_id;
+    }
+
+    @JsonManagedReference
+    public MedicalStaff getMedicalStaff() {
+        return medicalStaff;
+    }
+
+    public void setMedicalStaff(MedicalStaff medicalStaff) {
+        this.medicalStaff = medicalStaff;
     }
 
 

@@ -1,16 +1,21 @@
 package com.example.healthcare_java.model;
 
-// import javax.persistence.CascadeType;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-// import javax.persistence.FetchType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-// import javax.persistence.OneToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity(name = "medicalStaff")
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
 @Table(name = "medical_staff")
 public class MedicalStaff {
 
@@ -24,11 +29,15 @@ public class MedicalStaff {
     @NotNull
     private String medstaff_name;
 
-    // @OneToMany(
-    // mappedBy = "medicalStaff",
-    // cascade = CascadeType.PERSIST,
-    // fetch = FetchType.LAZY
-    // )
+    @OneToMany
+    (
+        targetEntity = Schedule.class,
+        mappedBy = "medicalStaff",
+        cascade = CascadeType.PERSIST,
+        fetch = FetchType.LAZY
+    )
+    @JsonIgnore
+    private Set<Schedule> schedule;
 
     public MedicalStaff() {
     }
@@ -65,5 +74,18 @@ public class MedicalStaff {
 
     public void setMedstaff_name(final String medstaff_name) {
         this.medstaff_name = medstaff_name;
+    }
+
+    @JsonBackReference
+    public Set<Schedule> getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Set<Schedule> schedule) {
+        this.schedule = schedule;
+        for(Schedule schedules : schedule)
+        {
+            schedules.setMedicalStaff(this);
+        }
     }
 }
