@@ -75,12 +75,14 @@ public class ScheduleController {
     public @ResponseBody ResponseEntity<Schedule> updateSchedule(
             @RequestParam String schedule_time,
             @RequestParam String schedule_date,
-            @PathVariable int medstaff_id) {
+            @RequestParam int medstaff_id,
+            @PathVariable int schedule_id) {
 
         try {
             Schedule scheduleData = new Schedule();
             MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
             scheduleData.setMedicalStaff(medicalData);
+            scheduleData.setSchedule_id(schedule_id);
             scheduleData.setSchedule_date(schedule_date);
             scheduleData.setSchedule_time(schedule_time);
             scheduleRepository.save(scheduleData);
