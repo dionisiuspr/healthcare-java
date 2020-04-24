@@ -35,7 +35,7 @@ public class AppointmentController {
     @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
     public @ResponseBody ResponseEntity<Appointment> addAppointment(@RequestParam String appointment_date,
             @RequestParam String appointment_time, @RequestParam boolean appointment_status,
-            @RequestParam int medstaff_id, @RequestParam int patient_id, @PathVariable int appointment_id) {
+            @RequestParam int medstaff_id, @RequestParam int patient_id) {
 
         try {
             Appointment appointmentData = new Appointment();
