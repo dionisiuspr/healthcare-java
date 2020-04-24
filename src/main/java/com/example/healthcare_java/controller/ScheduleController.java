@@ -75,7 +75,7 @@ public class ScheduleController {
     public @ResponseBody ResponseEntity<Schedule> updateSchedule(
             @RequestParam String schedule_time,
             @RequestParam String schedule_date,
-            @RequestParam int medstaff_id) {
+            @PathVariable int medstaff_id) {
 
         try {
             Schedule scheduleData = new Schedule();
