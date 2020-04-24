@@ -36,8 +36,8 @@ public class ScheduleController {
 
         try {
             Schedule scheduleData = new Schedule();
-            MedicalStaff medstaffData = medstaffRepository.findById(medstaff_id).get();
-            scheduleData.setMedicalStaff(medstaffData);
+            MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
+            scheduleData.setMedicalStaff(medicalData);
             scheduleData.setSchedule_date(schedule_date);
             scheduleData.setSchedule_time(schedule_time);;
             scheduleRepository.save(scheduleData);
@@ -47,14 +47,57 @@ public class ScheduleController {
         }
     }
 
-      // get
-      @GetMapping(path = "/schedule")
-      public @ResponseBody ResponseEntity<Iterable<Schedule>> getAllSchedule() {
-          try {
-              return ResponseEntity.ok(scheduleRepository.findAll());
-          } catch (Exception e) {
-              return ResponseEntity.notFound().build();
-          }
-      }
+    // get
+    @GetMapping(path = "/schedule")
+    public @ResponseBody ResponseEntity<Iterable<Schedule>> getAllSchedule() {
+        try {
+            return ResponseEntity.ok(scheduleRepository.findAll());
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    // get by id
+    @GetMapping(path = "/schedule/{id}")
+    public @ResponseBody ResponseEntity<Schedule> getSchedule(@PathVariable int id) {
+        try {
+            Schedule scheduleData = scheduleRepository.findById(id).get();
+            return ResponseEntity.ok(scheduleData);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    // update
+    @PutMapping(path = "/schedule/{id}")
+    public @ResponseBody ResponseEntity<Schedule> updateSchedule(
+            @RequestParam String schedule_time,
+            @RequestParam String schedule_date,
+            @RequestParam int medstaff_id) {
+
+        try {
+            Schedule scheduleData = new Schedule();
+            MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
+            scheduleData.setMedicalStaff(medicalData);
+            scheduleData.setSchedule_date(schedule_date);
+            scheduleData.setSchedule_time(schedule_time);
+            scheduleRepository.save (scheduleData);
+            return ResponseEntity.ok(scheduleData);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    // delete
+    @DeleteMapping(path = "/schedule/{id}")
+    public @ResponseBody ResponseEntity<Void> deleteSchedule(@PathVariable int id) {
+        try {
+            scheduleRepository.deleteById(id);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+}
 
 }
