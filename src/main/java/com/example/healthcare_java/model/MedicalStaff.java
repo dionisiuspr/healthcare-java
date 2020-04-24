@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "medical_staff")
-public class MedicalStaff implements Serializable{
+public class MedicalStaff implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,14 +31,13 @@ public class MedicalStaff implements Serializable{
     @NotNull
     private String medstaff_name;
 
-    @OneToMany
-    (
-        targetEntity = Schedule.class,
-        mappedBy = "medicalStaff",
-        fetch = FetchType.LAZY
-    )
+    @OneToMany(targetEntity = Schedule.class, mappedBy = "medicalStaff", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Schedule> schedule;
+
+    @OneToMany(targetEntity = Appointment.class, mappedBy = "medicalStaff", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Appointment> appointment;
 
     public MedicalStaff() {
     }
@@ -77,6 +76,7 @@ public class MedicalStaff implements Serializable{
         this.medstaff_name = medstaff_name;
     }
 
+    //Schedule
     @JsonBackReference
     public Set<Schedule> getSchedule() {
         return schedule;
@@ -84,9 +84,22 @@ public class MedicalStaff implements Serializable{
 
     public void setSchedule(Set<Schedule> schedule) {
         this.schedule = schedule;
-        for(Schedule schedules : schedule)
-        {
+        for (Schedule schedules : schedule) {
             schedules.setMedicalStaff(this);
         }
     }
+
+    //Appoinment
+    @JsonBackReference
+    public Set<Appointment> getAppointment() {
+        return appointment;
+    }
+
+    public void setAppoinment(Set<Appointment> appointment) {
+        this.appointment = appointment;
+        for (Appointment appointments : appointment) {
+            appointments.setMedicalStaff(this);
+        }
+    }
+
 }

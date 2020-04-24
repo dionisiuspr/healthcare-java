@@ -26,22 +26,17 @@ public class ScheduleController {
     @Autowired
     private MedicalStaffRepository medstaffRepository;
 
-    //insert
+    // insert
     @PostMapping(path = "/schedule/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<Schedule> addSchedule(
-            @RequestParam String schedule_date,
-            @RequestParam String schedule_time,
-            @RequestParam int medstaff_id,
-            @PathVariable int schedule_id) 
-        {
+    public @ResponseBody ResponseEntity<Schedule> addSchedule(@RequestParam String schedule_date,
+            @RequestParam String schedule_time, @RequestParam int medstaff_id) {
 
         try {
             Schedule scheduleData = new Schedule();
-            MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
+            MedicalStaff medicalData = medstaffRepository.findById(medstaff_id).get();
             scheduleData.setMedicalStaff(medicalData);
-            scheduleData.setSchedule_id(schedule_id);
             scheduleData.setSchedule_date(schedule_date);
-            scheduleData.setSchedule_time(schedule_time);;
+            scheduleData.setSchedule_time(schedule_time);
             scheduleRepository.save(scheduleData);
             return ResponseEntity.ok(scheduleData);
         } catch (Exception e) {
@@ -72,16 +67,12 @@ public class ScheduleController {
 
     // update
     @PutMapping(path = "/schedule/{schedule_id}")
-    public @ResponseBody ResponseEntity<Schedule> updateSchedule(
-            @RequestParam String schedule_time,
-            @RequestParam String schedule_date,
-            @RequestParam int medstaff_id,
-            @PathVariable int schedule_id) 
-    {
+    public @ResponseBody ResponseEntity<Schedule> updateSchedule(@RequestParam String schedule_time,
+            @RequestParam String schedule_date, @RequestParam int medstaff_id, @PathVariable int schedule_id) {
 
         try {
             Schedule scheduleData = new Schedule();
-            MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
+            MedicalStaff medicalData = medstaffRepository.findById(medstaff_id).get();
             scheduleData.setMedicalStaff(medicalData);
             scheduleData.setSchedule_id(schedule_id);
             scheduleData.setSchedule_date(schedule_date);

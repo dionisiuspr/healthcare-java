@@ -1,15 +1,25 @@
 package com.example.healthcare_java.model;
 
+import java.io.Serializable;
+import java.util.Set;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "patient")
-public class Patient {
+public class Patient implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,6 +40,10 @@ public class Patient {
     @NotNull
     private String patient_gender;
 
+    @OneToMany(targetEntity = Appointment.class, mappedBy = "patient", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Appointment> appointment;
+
     // constructors
     public Patient() {
     }
@@ -38,7 +52,8 @@ public class Patient {
         this.patient_id = patient_id;
     }
 
-    public Patient(String patient_name, String patient_address, int patient_age, String patient_dob, String patient_gender){
+    public Patient(String patient_name, String patient_address, int patient_age, String patient_dob,
+            String patient_gender) {
         this.patient_address = patient_address;
         this.patient_name = patient_name;
         this.patient_age = patient_age;
@@ -46,7 +61,7 @@ public class Patient {
         this.patient_gender = patient_gender;
     }
 
-    //getter - setter
+    // getter - setter
     public int getPatient_id() {
         return this.patient_id;
     }
@@ -93,5 +108,18 @@ public class Patient {
 
     public void setPatient_gender(String patient_gender) {
         this.patient_gender = patient_gender;
+    }
+
+    //appointment
+    @JsonBackReference
+    public Set<Appointment> getAppointment() {
+        return appointment;
+    }
+
+    public void setappointment(Set<Appointment> appointment) {
+        this.appointment = appointment;
+        for (Appointment appointments : appointment) {
+            appointments.setPatient(this);
+        }
     }
 }

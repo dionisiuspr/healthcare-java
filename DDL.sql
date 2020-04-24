@@ -59,14 +59,14 @@ CREATE TABLE medicine_list(
 );
 
 CREATE TABLE appointment(
-	appt_id int,
-	appt_date VARCHAR(50),
-	appt_time VARCHAR(50),
-	appt_status boolean,
+	appointment_id int,
+	appointment_date VARCHAR(50),
+	appointment_time VARCHAR(50),
+	appointment_status boolean,
 	-- fk
 	patient_id int,
 	medstaff_id int,
-	PRIMARY KEY(appt_id),
+	PRIMARY KEY(appointment_id),
 	FOREIGN KEY(patient_id) REFERENCES patient(patient_id),
 	FOREIGN KEY(medstaff_id) REFERENCES medical_staff(medstaff_id)
 );
