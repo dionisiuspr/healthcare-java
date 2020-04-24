@@ -71,12 +71,13 @@ public class ScheduleController {
     }
 
     // update
-    @PutMapping(path = "/schedule/{id}")
+    @PutMapping(path = "/schedule/{schedule_id}")
     public @ResponseBody ResponseEntity<Schedule> updateSchedule(
             @RequestParam String schedule_time,
             @RequestParam String schedule_date,
             @RequestParam int medstaff_id,
-            @PathVariable int schedule_id) {
+            @PathVariable int schedule_id) 
+    {
 
         try {
             Schedule scheduleData = new Schedule();
