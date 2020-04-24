@@ -31,13 +31,15 @@ public class ScheduleController {
     public @ResponseBody ResponseEntity<Schedule> addSchedule(
             @RequestParam String schedule_date,
             @RequestParam String schedule_time,
-            @RequestParam int medstaff_id) 
+            @RequestParam int medstaff_id,
+            @PathVariable int schedule_id) 
         {
 
         try {
             Schedule scheduleData = new Schedule();
             MedicalStaff medicalData =  medstaffRepository.findById(medstaff_id).get();
             scheduleData.setMedicalStaff(medicalData);
+            scheduleData.setSchedule_id(schedule_id);
             scheduleData.setSchedule_date(schedule_date);
             scheduleData.setSchedule_time(schedule_time);;
             scheduleRepository.save(scheduleData);
@@ -81,7 +83,7 @@ public class ScheduleController {
             scheduleData.setMedicalStaff(medicalData);
             scheduleData.setSchedule_date(schedule_date);
             scheduleData.setSchedule_time(schedule_time);
-            scheduleRepository.save (scheduleData);
+            scheduleRepository.save(scheduleData);
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
