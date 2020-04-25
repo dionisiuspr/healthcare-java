@@ -37,7 +37,7 @@ public class MedicalRecordController {
     private DiseaseRepository diseaseRepository;
 
     // insert
-    @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
+    // @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
 
     // get
     @GetMapping(path = "/record")
@@ -61,7 +61,7 @@ public class MedicalRecordController {
     }
 
     // update
-    @PutMapping(path = "/record/{record_id}")
+    // @PutMapping(path = "/record/{record_id}")
 
     // delete
     @DeleteMapping(path = "/record/{id}")
