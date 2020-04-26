@@ -37,7 +37,28 @@ public class MedicalRecordController {
     private DiseaseRepository diseaseRepository;
 
     // insert
-    // @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
+    @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
+    public @ResponseBody ResponseEntity<MedicalRecord> addMedicalRecord(@RequestParam String anamnesia,
+            @RequestParam int disease_id, @RequestParam int medstaff_id, @RequestParam int patient_id) {
+
+        try {
+            MedicalRecord medicalRecord = new MedicalRecord();
+            MedicalStaff medicalData = medstaffRepository.findById(medstaff_id).get();
+            Patient patientData = patientRepository.findById(patient_id).get();
+            Disease diseaseData = diseaseRepository.findById(disease_id).get();
+
+            medicalRecord.setMedicalStaff(medicalData);
+            medicalRecord.setPatient(patientData);
+            medicalRecord.setDisease(diseaseData);
+
+            medicalRecord.setAnamnesia(anamnesia);
+
+            medicalRecordRepository.save(medicalRecord);
+            return ResponseEntity.ok(medicalRecord);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     // get
     @GetMapping(path = "/record")
@@ -61,7 +82,30 @@ public class MedicalRecordController {
     }
 
     // update
-    // @PutMapping(path = "/record/{record_id}")
+    @PutMapping(path = "/record/{record_id}")
+    public @ResponseBody ResponseEntity<MedicalRecord> updateMedicalRecord(@RequestParam String anamnesia,
+    @RequestParam int disease_id, @RequestParam int medstaff_id, @RequestParam int patient_id,
+    @RequestParam int record_id) {
+
+        try {
+            MedicalRecord medicalRecord = new MedicalRecord();
+            MedicalStaff medicalData = medstaffRepository.findById(medstaff_id).get();
+            Patient patientData = patientRepository.findById(patient_id).get();
+            Disease diseaseData = diseaseRepository.findById(disease_id).get();
+
+            medicalRecord.setMedicalStaff(medicalData);
+            medicalRecord.setPatient(patientData);
+            medicalRecord.setDisease(diseaseData);
+
+            medicalRecord.setRecord_id(record_id);
+            medicalRecord.setAnamnesia(anamnesia);
+
+            medicalRecordRepository.save(medicalRecord);
+            return ResponseEntity.ok(medicalRecord);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     // delete
     @DeleteMapping(path = "/record/{id}")
