@@ -37,7 +37,7 @@ public class MedicalRecordController {
     private DiseaseRepository diseaseRepository;
 
     // insert
-    @PostMapping(path = "/appointment/add") // Map ONLY POST Requests
+    @PostMapping(path = "/record/add") // Map ONLY POST Requests
     public @ResponseBody ResponseEntity<MedicalRecord> addMedicalRecord(@RequestParam String anamnesia,
             @RequestParam int disease_id, @RequestParam int medstaff_id, @RequestParam int patient_id) {
 
@@ -101,7 +101,7 @@ public class MedicalRecordController {
             medicalRecord.setAnamnesia(anamnesia);
 
             medicalRecordRepository.save(medicalRecord);
-            return ResponseEntity.ok(medicalRecord);
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
