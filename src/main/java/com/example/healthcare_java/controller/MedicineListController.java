@@ -33,7 +33,7 @@ public class MedicineListController {
 
     // insert
     @PostMapping(path = "/medicinelist/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<MedicineList> addMedicalRecord(@RequestParam int record_id,
+    public @ResponseBody ResponseEntity<MedicineList> addMedicineList(@RequestParam int record_id,
             @RequestParam int medicine_id) {
 
         try {
