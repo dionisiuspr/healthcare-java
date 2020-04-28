@@ -287,8 +287,24 @@ pam.d/          pki/            prelink.conf.d/ protocols
 passwd          pm/             printcap
 passwd-         popt.d/         profile
 pkcs11/         ppp/            profile.d/
+
+mv apache-maven-3.6.3 /opt/
+
+mysqladmin -u root -p password newpass
+
+service mysqld stop
+service mysqld start
+
 [ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/profile.d/gradle.sh
+
+[ec2-user@ip-172-31-24-117 ~]$ sudo nano /etc/profile.d/maven.sh
+
+export PATH=/opt/apache-maven-3.6.3/bin:$PATH
+
 [ec2-user@ip-172-31-24-117 ~]$ source /etc/profile.d/gradle.sh
+
+[ec2-user@ip-172-31-24-117 ~]$ source /etc/profile.d/maven.sh
+
 [ec2-user@ip-172-31-24-117 ~]$ gradle -v
 Gradle 6.3 requires Java 8 or later to run. You are currently using Java 7.
 [ec2-user@ip-172-31-24-117 ~]$ sudo yum install java-1.8.0-openjdk
@@ -396,6 +412,7 @@ Complete!
 java version "1.7.0_251"
 OpenJDK Runtime Environment (amzn-2.6.21.0.82.amzn1-x86_64 u251-b02)
 OpenJDK 64-Bit Server VM (build 24.251-b02, mixed mode)
+
 [ec2-user@ip-172-31-24-117 ~]$ sudo update-alternatives --config java
 
 There are 2 programs which provide 'java'.
@@ -445,6 +462,7 @@ Last login: Thu Apr 23 08:27:55 2020 from 139.228.197.141
        _|  (     /   Amazon Linux AMI
       ___|\___|___|
 
+(move apache gradle to /opt, lalu sudo source) <lihat abwah>
 https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
 [ec2-user@ip-172-31-24-117 ~]$ java -version
 openjdk version "1.8.0_242"
@@ -483,11 +501,21 @@ http://yallalabs.com/devops/how-to-install-gradle-ubuntu-18-04-ubuntu-16-04/
 https://maven.apache.org/install.html
 https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 
-CREATE USER 'root'@'172.31.24.117' IDENTIFIED BY 'java';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'3.23.85.249' WITH GRANT OPTION;
+sudo yum install mysql-server
+
+wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+move to /opt/ later
+tar xzvf apache-maven-3.6.3-bin.tar.gz
+
+mv apache-maven-3.6.3 /opt/
+
+CREATE USER 'root'@'%' IDENTIFIED BY 'java';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 CREATE USER 'root'@'%' IDENTIFIED BY 'java';
+
+select host, user, password from mysql.user;
 
 mvn -T 4 install
 mvn -T 1C install //untuk RAM
