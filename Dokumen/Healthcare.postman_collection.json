@@ -1,0 +1,4334 @@
+{
+	"info": {
+		"_postman_id": "081bfd64-e940-4656-8473-bea94ed76a3b",
+		"name": "Healthcare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patient_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text"
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text"
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/patient",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_get_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/patient/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text"
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text"
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/patient/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"patient",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text"
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text"
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/patient/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text"
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text"
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/patient/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medstaff_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medstaff/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medstaff",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medstaff_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medstaff",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medstaff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medstaff_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text"
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text"
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medstaff/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medstaff",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medstaff_get_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medstaff/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medstaff",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medstaff_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medstaff/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medstaff",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disease_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text"
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text"
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/disease/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"disease",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disease_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text"
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text"
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/disease/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"disease",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disease_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/disease/",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"disease",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disease_get_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/disease/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"disease",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disease_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/disease/2",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"disease",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicine_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text"
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text"
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text"
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text"
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicine/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicine",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicine_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text"
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text"
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text"
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text"
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicine/2",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicine",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicine_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicine/",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicine",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicine_get_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicine/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicine",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicine_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "2020/08/11",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_time",
+							"value": "18:27",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "appointment_status",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_name",
+							"value": "Yohan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "medstaff_age",
+							"value": "38",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1997/05/26",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_type",
+							"value": "infectious",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "disease_name",
+							"value": "covid-19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_date",
+							"value": "2025-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_name",
+							"value": "Methylprednisolone 4mg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_vendor",
+							"value": "Sanbe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_level",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_price",
+							"value": "40000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "med_qty",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_date",
+							"value": "2020/05/03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "schedule_time",
+							"value": "16:15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_name",
+							"value": "Gianicad_edit",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_address",
+							"value": "Holis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_age",
+							"value": "21",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_dob",
+							"value": "1999-08-09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patient_gender",
+							"value": "M",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicine/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicine",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinelist_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicinelist/",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicinelist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinelist_get_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicinelist/21",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicinelist",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinelist_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "record_id",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "medicine_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "medicinelist_id",
+							"value": "18",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicinelist/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicinelist",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinelist_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "record_id",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "medicine_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "medicinelist_id",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicinelist/18",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicinelist",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinelist_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/medicinelist/18",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"medicinelist",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicalrecord_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/record/",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"record",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicalrecord_get_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/record/16",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"record",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicalrecord_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "anamnesia",
+							"value": "Negatif Koped-20",
+							"type": "text"
+						},
+						{
+							"key": "disease_id",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/record/add",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"record",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicalrecord_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "anamnesia",
+							"value": "Dugaan koped-20",
+							"type": "text"
+						},
+						{
+							"key": "disease_id",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "patient_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "record_id",
+							"value": "22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/record/22",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"record",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicalrecord_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/record/22",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"record",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "schedule_time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "schedule_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/schedule",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/schedule",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule_get_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/schedule/1",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"schedule",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "schedule_date",
+							"value": "2020/06/01",
+							"type": "text"
+						},
+						{
+							"key": "schedule_time",
+							"value": "20:05",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/schedule/3",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"schedule",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/schedule/3",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"schedule",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/appointment",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment_get_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/appointment/9",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"appointment",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "appointment_time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "appointment_status",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/appointment",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "appointment_time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "appointment_status",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medstaff_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/appointment",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "3.23.85.249:8090/healthcare/appointment",
+					"host": [
+						"3",
+						"23",
+						"85",
+						"249"
+					],
+					"port": "8090",
+					"path": [
+						"healthcare",
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
